@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Push and Pop Example</title>>
+</head>
+<body>
+    <h1>Array Manipulation</h1>
+    <button id="addFruit">Add Fruit</button>
+    <button id="removeFruit">Remove Fruit</button>
+    <div id="result"></div>
+    <script>
+        const fruits = ['Apple', 'Banana', 'Cherry'];
+        document.getElementById('addFruit').addEventListener('click', function() {
+            fruits.push('Date');
+            document.getElementById('result').innerHTML = `<p>Fruits: ${fruits.join(', ')}</p>`;
+        });
+        document.getElementById('removeFruit').addEventListener('click', function() {
+            const removedFruit = fruits.pop();
+            document.getElementById('result').innerHTML = `<p>Removed: ${removedFruit}</p><p>Fruits: ${fruits.join(', ')}</p>`;
+        });
+    </script>
+</body>
+</html>

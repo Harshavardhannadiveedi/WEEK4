@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Even or Odd</title>
+    <script>
+        const isEvenOrOdd = num => num % 2 === 0 ? 'Even' : 'Odd';
+        function checkNumber() {
+            const number = parseInt(document.getElementById('number').value);
+            const result = isEvenOrOdd(number);
+            document.getElementById('result').textContent = `The number is: ${result}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Check If a Number Is Even or Odd</h1>
+    <form onsubmit="event.preventDefault(); checkNumber();">
+        <label for="number">Enter a number:</label>
+        <input type="number" id="number" required>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>

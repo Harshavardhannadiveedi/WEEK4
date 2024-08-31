@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Shift and Unshift Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Manipulation</h1>
+    <button id="addElement">Add Element</button>
+    <button id="removeElement">Remove First Element</button>
+    <div id="result"></div>
+
+    <script>
+        const fruits = ['Apple', 'Banana', 'Cherry'];
+
+        function updateDisplay() {
+            document.getElementById('result').innerHTML = `<p>Fruits: ${fruits.join(', ')}</p>`;
+        }
+        document.getElementById('addElement').addEventListener('click', function() {
+            fruits.unshift('Mango');
+            updateDisplay();
+        });
+        document.getElementById('removeElement').addEventListener('click', function() {
+            if (fruits.length > 0) {
+                const removedFruit = fruits.shift();
+                document.getElementById('result').innerHTML = `<p>Removed: ${removedFruit}</p>
+                                                               <p>Fruits: ${fruits.join(', ')}</p>`;
+            } else {
+                document.getElementById('result').innerHTML = '<p>No fruits to remove.</p>';
+            }
+        });
+        updateDisplay();
+    </script>
+</body>
+</html>

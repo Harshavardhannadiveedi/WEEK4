@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Nodes Example</title>
+</head>
+<body>
+    <h1>Log Number of Child Nodes</h1>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph.</p>
+    <div>Another element</div>
+    <button id="logChildNodes">Log Child Nodes</button>
+    <script>
+        document.getElementById('logChildNodes').addEventListener('click', function() {
+            const numberOfChildNodes = document.body.childNodes.length;
+            console.log('Number of child nodes of the body element:', numberOfChildNodes);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Array Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fruit Array</h1>
+    <button id="showFruits">Show First and Last Fruit</button>
+    <div id="result"></div>
+    <script>
+        const fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+        document.getElementById('showFruits').addEventListener('click', function() {
+            const firstFruit = fruits[0];
+            const lastFruit = fruits[fruits.length - 1];
+            document.getElementById('result').innerHTML = `<p>First Fruit: ${firstFruit}</p><p>Last Fruit: ${lastFruit}</p>`;
+        });
+    </script>
+</body>
+</html>

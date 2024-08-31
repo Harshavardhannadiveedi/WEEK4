@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Constructor Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Person Object</h1>
+    <form id="personForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <button type="submit" style="cursor: pointer;">Create Person</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        document.getElementById('personForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const person = new Person(name, age);
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<p>Person Created:</p>
+                                   <p>Name: ${person.name}</p>
+                                   <p>Age: ${person.age}</p>`;
+        });
+    </script>
+</body>
+</html>

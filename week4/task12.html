@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Assigner</title>
+</head>
+<body>
+
+    <h1>Assign Grade Based on Marks</h1>
+
+    <input type="number" id="marks" placeholder="Enter your marks">
+    <button onclick="assignGrade()" style="cursor: pointer;">Get Grade</button>
+    <p id="result"></p>
+
+    <script>
+        function assignGrade() {
+            let marks = parseInt(document.getElementById("marks").value);
+            let grade;
+
+            switch (true) {
+                case (marks >= 90 && marks <= 100):
+                    grade = "A+";
+                    break;
+                case (marks >= 80 && marks < 90):
+                    grade = "A";
+                    break;
+                case (marks >= 70 && marks < 80):
+                    grade = "B";
+                    break;
+                case (marks >= 60 && marks < 70):
+                    grade = "C";
+                    break;
+                case (marks >= 50 && marks < 60):
+                    grade = "D";
+                    break;
+                case (marks >= 0 && marks < 50):
+                    grade = "F";
+                    break;
+                default:
+                    grade = "Invalid marks entered.";
+            }
+
+            document.getElementById("result").textContent = "Your grade is: " + grade;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For...in Loop Example</title>
+</head>
+<body>
+    <h1>Person Details</h1>
+    <ul id="person-list"></ul>
+
+    <script>
+        const person = {
+            name: 'Bob',
+            age: 25,
+            job: 'Designer',
+            city: 'Los Angeles'
+        };
+        const personList = document.getElementById('person-list');
+        for (let property in person) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${property}: ${person[property]}`;
+            personList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Object Example</title>
+    <script>
+        const car ={
+            make: 'Toyota',
+            model: 'Camry',
+            year: 2022,
+            displayInfo: function() {
+                return `${this.year} ${this.make} ${this.model}`;
+            }
+        };
+        function showCarInfo() {
+            const carInfo = car.displayInfo();
+            document.getElementById('carInfo').textContent = carInfo;
+        }
+    </script>
+</head>
+<body>
+    <h1>Car Information</h1>
+    <button onclick="showCarInfo()">Show Car Info</button>
+    <p id="carInfo"></p>
+</body>
+</html>

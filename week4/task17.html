@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For...of Loop Example</title>
+</head>
+<body>
+    <h1>Array Elements</h1>
+    <ul id="array-list"></ul>
+    <script>
+        const fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+        const arrayList = document.getElementById('array-list');
+        for (const fruit of fruits) {
+            const listItem = document.createElement('li');
+            listItem.textContent = fruit;
+            arrayList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

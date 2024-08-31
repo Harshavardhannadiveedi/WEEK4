@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Filter Example</title>
+</head>
+<body>
+    <h1>Filter Even Numbers</h1>
+    <button id="filterEven">Filter Even Numbers</button>
+    <div id="result"></div>
+    <script>
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        function updateDisplay(arr) {
+            document.getElementById('result').innerHTML = `<p>Original Numbers: ${numbers.join(', ')}</p><p>Even Numbers: ${arr.join(', ')}</p>`;
+        }
+        document.getElementById('filterEven').addEventListener('click', function() {
+            const evenNumbers = numbers.filter(num => num % 2 === 0);
+            updateDisplay(evenNumbers);
+        });
+        updateDisplay(numbers);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert String to Uppercase</title>
+    <script>
+        const toUpperCase = str => str.toUpperCase();
+        function convertString() {
+            const input = document.getElementById('input').value;
+            const result = toUpperCase(input);
+            document.getElementById('result').textContent = `Uppercase: ${result}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Convert String to Uppercase</h1>
+    <form onsubmit="event.preventDefault(); convertString();">
+        <label for="input">Enter a string:</label>
+        <input type="text" id="input" required>
+        <br>
+        <button type="submit">Convert</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>

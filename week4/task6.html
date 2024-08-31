@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var, Let, and Const Example</title>
+</head>
+<body>
+    <h1>Understanding var, let, and const in JavaScript</h1>
+    <button onclick="runExamples()">Run Examples</button>
+    
+    <script>
+        function runExamples() {
+            // Example with var
+            function exampleVar() {
+                var x = 10;
+                if (true) {
+                    var x = 20; // Same variable, redeclared within the same scope
+                    console.log("Inside block with var:", x); // 20
+                }
+                console.log("Outside block with var:", x); // 20
+            }
+
+            // Example with let
+            function exampleLet() {
+                let y = 10;
+                if (true) {
+                    let y = 20; // Different variable, block-scoped
+                    console.log("Inside block with let:", y); // 20
+                }
+                console.log("Outside block with let:", y); // 10
+            }
+
+            // Example with const
+            function exampleConst() {
+                const z = 10;
+                // z = 20; // Uncommenting this line will cause an error
+                console.log("Constant z:", z); // 10
+
+                const arr = [1, 2, 3];
+                arr.push(4); // Allowed: modifying the contents of the array
+                console.log("Modified array:", arr); // [1, 2, 3, 4]
+
+                const obj = { name: "Alice" };
+                obj.name = "Bob"; // Allowed: modifying the contents of the object
+                console.log("Modified object:", obj); // { name: "Bob" }
+            }
+
+            console.log("Example with var:");
+            exampleVar();
+            console.log("Example with let:");
+            exampleLet();
+            console.log("Example with const:");
+            exampleConst();
+        }
+    </script>
+</body>
+</html>

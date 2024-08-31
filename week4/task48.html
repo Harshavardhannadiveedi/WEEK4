@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Element</title>
+</head>
+<body>
+    <div id="original">
+        <p>This is the original element.</p>
+    </div>
+    <button onclick="cloneAndAppend()">Clone and Append</button>
+    
+    <script>
+        function cloneAndAppend() {
+            var originalElement = document.getElementById('original');
+            var clonedElement = originalElement.cloneNode(true);
+            document.body.appendChild(clonedElement);
+        }
+    </script>
+</body>
+</html>

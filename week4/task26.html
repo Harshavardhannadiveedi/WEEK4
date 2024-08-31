@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword Example</title>
+    <script>
+        const person = {
+            name: 'HARSHA.N',
+            age: 19,
+            introduce() {
+                return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+            }
+        };
+
+        function displayIntroduction() {
+            const message = person.introduce();
+            document.getElementById('intro').textContent = message;
+        }
+    </script>
+</head>
+<body>
+    <h1>This Keyword Example</h1>
+    <button onclick="displayIntroduction()">Introduce Me</button>
+    <p id="intro"></p>
+</body>
+</html>

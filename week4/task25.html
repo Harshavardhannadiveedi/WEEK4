@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Method Example</title>
+    <script>
+        const person = {
+            name: 'HARSHA',
+            greet() {
+                return `Hello, my name is ${this.name}!`;
+            }
+        };
+        function showGreeting() {
+            const message = person.greet();
+            document.getElementById('greetingMessage').textContent = message;
+        }
+    </script>
+</head>
+<body>
+    <h1>Greeting Method Example</h1>
+    <button onclick="showGreeting()">Show Greeting</button>
+    <p id="greetingMessage"></p>
+</body>
+</html>

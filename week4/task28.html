@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Prototype Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .form-group { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Create Person Object with Prototype Method</h1>
+    <form id="personForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <button type="submit">Create Person and Greet</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.greet = function() {
+            return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+        };
+        document.getElementById('personForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const person = new Person(name, age);
+            document.getElementById('result').innerHTML = `<p>${person.greet()}</p>`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Function Example</title>
+</head>
+<body>
+    <h1>Sum Function Example</h1>
+    <p id="result"></p>
+
+    <script>
+        function addNumbers(a, b) {
+            return a + b;
+        }
+        let num1 = parseFloat(prompt("Enter the first number:"));
+        let num2 = parseFloat(prompt("Enter the second number:"));
+        let sum = addNumbers(num1, num2);
+        document.getElementById('result').textContent = `The sum is: ${sum}`;
+    </script>
+</body>
+</html>

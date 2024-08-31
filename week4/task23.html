@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local vs Global Scope</title>
+    <script>
+        // Global variable
+        let globalVar = 'I am a global variable';
+
+        function demonstrateScopes() {
+            // Local variable
+            let localVar = 'I am a local variable';
+            
+            // Accessing global and local variables inside the function
+            document.getElementById('output').textContent = `Inside function: ${globalVar}, ${localVar}`;
+        }
+
+        function showGlobalVar() {
+            // Accessing global variable outside the function
+            document.getElementById('globalOutput').textContent = `Global variable: ${globalVar}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Demonstrate Local and Global Scope</h1>
+    <button onclick="demonstrateScopes()">Show Scopes</button>
+    <button onclick="showGlobalVar()">Show Global Variable</button>
+    <p id="output"></p>
+    <p id="globalOutput"></p>
+</body>
+</html>

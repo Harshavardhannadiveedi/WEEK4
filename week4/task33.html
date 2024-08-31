@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Map Example</title>
+</head>
+<body>
+    <h1>Square Numbers with Map</h1>
+    <button id="squareNumbers">Square Numbers</button>
+    <div id="result"></div>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        function updateDisplay(arr) {
+            document.getElementById('result').innerHTML = `<p>Original Numbers: ${numbers.join(', ')}</p><p>Squared Numbers: ${arr.join(', ')}</p>`;
+        }
+        document.getElementById('squareNumbers').addEventListener('click', function() {
+            const squaredNumbers = numbers.map(num => num * num);
+            updateDisplay(squaredNumbers);
+        });
+        updateDisplay(numbers);
+    </script>
+</body>
+</html>

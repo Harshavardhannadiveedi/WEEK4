@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers Printer</title>
+</head>
+<body>
+    <h1>First 5 Even Numbers</h1>
+    <div id="evenno"></div>
+
+    <script>
+        const evenNumbersList = document.getElementById('evenno');
+        let count = 0;
+        let number = 2;
+
+        while (count < 5) {
+            evenNumbersList.innerHTML += number + '<br>';
+            number += 2;
+            count++;
+        }
+    </script>
+</body>
+</html>
